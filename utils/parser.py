@@ -11,6 +11,19 @@ class ConsoleParser(object):
 
 class ConsoleExec(object):
     @classmethod
+    def command_1(cls, command):
+        command = map(lambda x: x.strip(), command.split())
+        output = subprocess.Popen(command, stdout=subprocess.PIPE, shell=True).communicate()
+        return output[0]
+
+    @classmethod
+    def command_2(cls, command):
+        process = os.popen(command)
+        output = process.read()
+        process.close()
+        return output
+
+    @classmethod
     def get_i(cls, **kwargs):
         pass
 
