@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>{{title}}</title>
+</head>
+<body>
+
+<center>
+    <form action="/" method="post">
+        视频所在网页URL: <input type="text" name="url" value="{{video_meta.get('page_utl','')}}"/>
+        <br/>
+        <input type="submit" value="开始解析"/>
+    </form>
+    <hr>
+    <p>状态信息:<font color="#FF0000">{{status}}</font> </p>
+    <hr>
+    <p>来源网站：{{video_meta.get("site","")}}</p>
+    <p>标题：{{video_meta.get("title","")}}</p>
+    <p>格式：{{video_meta.get("format","")}}</p>
+    <p>地址：</p>
+    {%for src in video_meta.get("src",[])%}
+    <p>->：{{src}}</p>
+    {%end%}
+</center>
+
+</body>
+</html>
