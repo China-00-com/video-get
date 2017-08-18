@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>JS-VideoParser</title>
+    <link rel="shortcut icon" href="{{ static_url('img/favicon.ico') }}"/>
+</head>
+<body>
+
+<center>
+    视频所在网页URL: <input id="page_url" type="text" name="url" value="" width="500"/>
+    <br/>
+    <button id="parse_it">开始解析</button>
+    <hr>
+    <div id="parse_result"></div>
+</center>
+<iframe src="http://www.baidu.com" ></iframe>
+<script src="{{ static_url('js/lib/jquery.min.js') }}"></script>
+<script src="{{ static_url('js/lib/jsonFormater.js') }}"></script>
+<script src="{{ static_url('js/videoparser.js') }}"></script>
+</body>
+</html>

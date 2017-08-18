@@ -3,6 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <title>{{title}}</title>
+    <link rel="shortcut icon" href="{{ static_url('img/favicon.ico') }}"/>
 </head>
 <body>
 
@@ -13,7 +14,7 @@
         <input type="submit" value="开始解析"/>
     </form>
     <hr>
-    <p>状态信息:<font color="#FF0000">{{status}}</font> </p>
+    <p>状态信息:<font color="#FF0000">{{status}}</font></p>
     <hr>
     <p>来源网站：{{video_meta.get("site","")}}</p>
     <p>标题：{{video_meta.get("title","")}}</p>
