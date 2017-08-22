@@ -31,28 +31,3 @@ function parse_video(url) {
     })
 
 }
-
-//Test
-// 格式化解析结果
-function fornat_json_to_web(json_data, show_dom) {
-    var format = function () {
-        var options = {
-            dom: show_dom,
-            quoteKeys: true,
-            tabSize: 2,
-        };
-        window.jf = new JsonFormater(options);
-        jf.doFormat(json_data);
-    };
-    format();
-
-}
-
-$("#parse_it").click(function () {
-    var url = $('#page_url').val();
-        console.log(url);
-    var json_data = parse_video(url);
-    console.log(json_data);
-    fornat_json_to_web(json_data, '#parse_result');
-});
-
